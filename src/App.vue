@@ -4,9 +4,9 @@
 
     </top-header>
 
-    <home>
-    </home>
-
+    <div class="container">
+      <home></home>
+    </div>
   </div>
 </template>
 
@@ -23,11 +23,39 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+<style lang="scss">
+  @import "~@/assets/sass/bootstrap";
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #edeff0;
+    color: #2c3e50;
+    margin-top: calc(#{$header-height} + (#{$header-padding}*2))
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    color: rgba($blue, .9);
+    transition: color 100ms ease-in;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1;
+  }
 </style>
