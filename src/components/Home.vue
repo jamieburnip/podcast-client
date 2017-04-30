@@ -1,6 +1,10 @@
 <template>
   <div>
-    <podcast></podcast>
+    <transition-group name="fade">
+      <podcast :key="1"></podcast>
+      <podcast :key="2"></podcast>
+      <podcast :key="3"></podcast>
+    </transition-group>
     <a href="#" class="load-more">Load older podcasts</a>
   </div>
 </template>
