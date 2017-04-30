@@ -1,6 +1,9 @@
 <template>
-  <div>
-    Player
+  <div class="player">
+    <div class="player__header">
+      <span>Now playing</span>: Podcast title
+    </div>
+    <audio controls autoplay ref="player" class="player__audio"></audio>
   </div>
 </template>
 
@@ -9,3 +12,24 @@
 
   }
 </script>
+
+<style lang="scss">
+  @import "~@/assets/sass/bootstrap";
+
+  .player {
+    width: 100%;
+
+    &__header {
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    &__audio {
+      width: 100%;
+    }
+  }
+</style>
