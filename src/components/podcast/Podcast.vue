@@ -35,7 +35,7 @@
       width: 15%;
       display: none;
       overflow: hidden;
-      background-color: $blue;
+      background-color: $colorOne;
       align-items: center;
       justify-content: center;
       border-top-left-radius: $global-radius;

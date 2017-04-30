@@ -45,11 +45,11 @@ export default {
   }
 
   a {
-    color: rgba($blue, .9);
+    color: rgba($colorOne, .9);
     transition: color 100ms ease-in;
 
     &:hover {
-      color: $blue;
+      color: $colorOne;
     }
   }
 
