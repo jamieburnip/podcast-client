@@ -6,7 +6,7 @@
     <div class="podcast__details">
       <div class="podcast__sub">2 days ago</div>
       <h1 class="podcast__header">
-        Lorem ipsum dolor sit.
+        <a href="#">Lorem ipsum dolor sit.</a>
       </h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
@@ -40,6 +40,7 @@
       justify-content: center;
       border-top-left-radius: $global-radius;
       border-bottom-left-radius: $global-radius;
+      transition: margin-left 190ms ease-in-out;
 
       &:hover {
         .podcast__play-button {
@@ -57,8 +58,20 @@
     }
 
     &__details {
-      width: 85%;
+      flex: 1;
       padding: 40px;
+    }
+
+    &__sub {
+      font-weight: 500;
+    }
+
+    &__header {
+      font-size: 1.6em;
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 
