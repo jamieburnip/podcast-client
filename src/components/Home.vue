@@ -10,12 +10,21 @@
 </template>
 
 <script type="text/javascript">
+  import { mapActions } from 'vuex'
   import Podcast from './podcast/Podcast'
 
   export default {
     name: 'home',
     components: {
       Podcast
+    },
+    methods: {
+      ...mapActions({
+        getPodcasts: 'podcasts/getPodcasts'
+      })
+    },
+    mounted () {
+      this.getPodcasts()
     }
   }
 </script>
